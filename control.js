@@ -1,5 +1,16 @@
 function fetchData(dateTime) {
-  // do ish
+  var baseURL = '';
+  // var url = baseURL + '?dateTime=' + encodeURIComponent(dateTime);
+
+  if (url && fetch) {
+    fetch(url)
+      .then(function(res) {
+        myMap.updateHeatmap(res.json);
+      })
+      .catch(function(err) {
+        console.log("FETCH ERROR: ", err);
+      })
+  }
 }
 
 window.initControls = function() {
