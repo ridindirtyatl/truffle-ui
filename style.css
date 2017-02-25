@@ -16,6 +16,7 @@
 
 .menu input {
   width: 100%;
+  margin-top: 20px;
 }
 
 .menu .total-riding .label, .menu .total-riding .val {
@@ -34,6 +35,7 @@
   color: #333;
 }
 
-.menu .show, .menu input {
-  margin-top: 20px;
+.menu .total-riding {
+  //margin-botom: 20px;
+  display: none;
 }
