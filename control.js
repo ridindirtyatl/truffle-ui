@@ -15,6 +15,12 @@ function fetchData(datetime) {
       .catch(function(err) {
         console.log("FETCH ERROR: ", err);
       })
+  } else {
+    console.log("#FAKEDATA");
+    var fakeData = [
+      { latitude: 33.775723, longitude: -84.388733, weight: 5 }
+    ]
+    myMap.updateHeatmap(fakeData);
   }
 }
 

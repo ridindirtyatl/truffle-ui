@@ -3,7 +3,6 @@ var MARTAMap = function() {
   this.mapObj = {};
   this.mapEl = document.getElementById('map');
   this.mapCenter = new google.maps.LatLng(33.775723, -84.388733);
-  this.heatmapData = [];
   this.currentTime = '';
 };
 
@@ -25,7 +24,7 @@ MARTAMap.prototype.initMap = function() {
 }
 
 MARTAMap.prototype.updateHeatmap = function(busCollection) {
-  this.heatmapData = [];
+  heatmapData = [];
 
   busCollection.forEach(function(bus) {
     heatmapData.push({
