@@ -24,12 +24,12 @@ MARTAMap.prototype.initMap = function() {
 }
 
 MARTAMap.prototype.updateHeatmap = function(busCollection) {
-  heatmapData = [];
+  var heatmapData = [];
 
   busCollection.forEach(function(bus) {
     heatmapData.push({
-      location: bus.latitude && bus.longitude && new google.maps.LatLng(bus.latitude, bus.longitude),
-      weight: bus.actual_passenger_count || 1
+      location: bus[0] && bus[1] && new google.maps.LatLng(bus[0], bus.[0]),
+      weight: bus[2] || 1
     });
   });
 

@@ -1,11 +1,9 @@
 function fetchData(datetime) {
-  var baseURL = '';
+  var baseURL = 'localhost:8080/';
   var year = '2016';
   var month = '07';
   var day = '0' + datetime.getDate();
   var url = baseURL + year + month + day + '.json';
-  console.log("URL: ", url);
-  var url = undefined;
 
   if (url && fetch) {
     fetch(url)
