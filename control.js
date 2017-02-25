@@ -1,6 +1,7 @@
 function fetchData(dateTime) {
   var baseURL = '';
   // var url = baseURL + '?dateTime=' + encodeURIComponent(dateTime);
+  var url = undefined;
 
   if (url && fetch) {
     fetch(url)
