@@ -22,11 +22,18 @@ window.initControls = function() {
 
   var updateDateTime = function(e) {
     var sliderVal = e.target.value;
-    var datetime = scale.invert(sliderVal)
+    var datetime = scale.invert(sliderVal);
 
     fetchData(datetime);
+  }
+
+  var updateLabel = function(e) {
+    var sliderVal = e.target.value;
+    var datetime = scale.invert(sliderVal);
+
     datetimeValEl.innerHTML = datetime;
   }
 
-  sliderEl.addEventListener("input", updateDateTime);
+  sliderEl.addEventListener("change", updateDateTime);
+  sliderEl.addEventListener("input", updateLabel);
 };
