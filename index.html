@@ -1,0 +1,41 @@
+<head>
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB3xxSlRNRJRomcVb5z1tDzv6s8mV5orSU&libraries=drawing"></script>
+  <script type="text/javascript" src="map.js"></script>
+  <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+  <div id="map" />
+  <div class="menu">
+    <div class="counter">
+      <div class="total-riding">
+        <div class="label">
+          Total Riding:
+        </div>
+        <div class="val" />
+      </div>
+      <div class="total-late">
+        <div class="label">
+          Total Late:
+        </div>
+        <div class="val" />
+      </div>
+      <div class="total-ahead">
+        <div class="label">
+          Total Ahead:
+        </div>
+        <div class="val" />
+      </div>
+    </div>
+    <div class="datetime">
+      <div class="show">
+        <div class="label">
+          Date / Time:
+        </div>
+        <div class="val" />
+      </div>
+      <div class="select">
+        <input type="range" id="datetime-selector" min="0" max="1000" val="1000" />
+      </div>
+    </div>
+  </div>
+</body>
