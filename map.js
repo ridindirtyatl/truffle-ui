@@ -3,7 +3,7 @@ var MARTAMap = function() {
   this.mapObj = {};
   this.mapEl = document.getElementById('map');
   this.mapCenter = new google.maps.LatLng(33.775723, -84.388733);
-  this.busList = {};
+  this.heatmapData = [];
   this.currentTime = '';
 };
 
@@ -22,6 +22,22 @@ MARTAMap.prototype.initMap = function() {
   };
 
   this.mapObj = new google.maps.Map(this.mapEl, opts);
+}
+
+MARTAMap.prototype.updateHeatmap = function(busCollection) {
+  this.heatmapData = [];
+
+  busCollection.forEach(function(bus) {
+    heatmapData.push({
+      location: bus.latitude && bus.longitude && new google.maps.LatLng(bus.latitude, bus.longitude),
+      weight: bus.actual_passenger_count || 1
+    });
+  });
+
+  this.heatmap = new google.maps.visualization.HeatmapLayer({
+    data: heatmapData
+  });
+  this.heatmap.setMap(this.mapObj);
 }
 
 // GO!
