@@ -40,8 +40,4 @@ MARTAMap.prototype.updateHeatmap = function(busCollection) {
   this.heatmap.setMap(this.mapObj);
 }
 
-// GO!
-window.onload = function() {
-  window.myMap = new MARTAMap();
-  myMap.initMap();
-}
+window.MARTAMap = MARTAMap;

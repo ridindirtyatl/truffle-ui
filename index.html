@@ -1,10 +1,20 @@
 <head>
   <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB3xxSlRNRJRomcVb5z1tDzv6s8mV5orSU&libraries=visualization"></script>
+  <script src="https://d3js.org/d3.v4.min.js"></script>
   <script type="text/javascript" src="map.js"></script>
+  <script type="text/javascript" src="control.js"></script>
   <link rel="stylesheet" type="text/css" href="style.css" />
+  <script>
+    // GO!
+    window.onload = function() {
+      myMap = new MARTAMap();
+      myMap.initMap();
+      initControls();
+    }
+  </script>
 </head>
 <body>
-  <div id="map" />
+  <div id="map"></div>
   <div class="menu">
     <div class="counter">
       <div class="total-riding">
@@ -31,7 +41,7 @@
         <div class="label">
           Date / Time:
         </div>
-        <div class="val" />
+        <div class="val" id="datetime-val" />
       </div>
       <div class="select">
         <input type="range" id="datetime-selector" min="0" max="1000" val="1000" />
